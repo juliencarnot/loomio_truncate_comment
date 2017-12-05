@@ -29,7 +29,6 @@
 
 .new-comment__show-more {
   @include lmoBtnLink;
-  @include fontSmall;
   color: $link-color;
   line-height: 0px;
   margin-bottom: 20px;
