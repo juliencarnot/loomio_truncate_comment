@@ -3,7 +3,7 @@ angular.module('loomioApp').directive 'truncateComment', ->
   restrict: 'E'
   replace: true
   templateUrl: 'generated/components/truncate_comment/truncate_comment.html'
-  controller: ($scope, $timeout) ->
+  controller: ['$scope', '$timeout', ($scope, $timeout) ->
     commentHeight = 0
     LONG_COMMENT_HEIGHT = 300
 
@@ -24,3 +24,4 @@ angular.module('loomioApp').directive 'truncateComment', ->
       commentHeight = $scope.commentElement().clientHeight
       $scope.toggleComment() if $scope.commentIsLong()
     return
+  ]
